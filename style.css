@@ -144,3 +144,31 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
+
+/* MOBILE FIX: Resize buttons so they don't overflow on small screens */
+@media (max-width: 700px) {
+  /* All social buttons shrink to fit mobile width */
+  #discord a,
+  #vrchat a,
+  #instagram a,
+  #telegram a {
+    width: 90%; /* Take up most of the screen width */
+    max-width: 350px; /* Never get wider than 350px */
+  }
+}
+/* MOBILE FIX: Center everything vertically + horizontally on phones */
+@media (max-width: 700px) {
+  body {
+    display: flex; /* Turn body into a flex container */
+    flex-direction: column; /* Stack everything vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px 0; /* Add breathing room */
+  }
+}
+/* MOBILE FIX: Make the profile picture smaller on phones */
+@media (max-width: 700px) {
+  .profile-img img {
+    width: 150px; /* Smaller image for small screens */
+    height: 150px;
+  }
+}
